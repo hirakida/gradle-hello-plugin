@@ -1,0 +1,12 @@
+buildscript {
+    dependencies {
+        classpath files('../build/libs/gradle-hello-plugin-0.0.1.jar')
+    }
+}
+
+apply plugin: 'com.hirakida.hello'
+
+hello {
+    greeting = 'Good morning'
+    message = 'gradle-hello-plugin!'
+}
