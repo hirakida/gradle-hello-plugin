@@ -1,7 +1,12 @@
 buildscript {
+    repositories {
+        maven { url "file://${rootProject.projectDir}/../maven-repo" }
+//        maven { url 'https://hirakida.github.io/maven-repo/' }
+    }
     dependencies {
-        classpath files('../build/libs/gradle-hello-plugin-0.0.1.jar')
+        classpath 'com.github.hirakida:gradle-hello-plugin:0.0.1-SNAPSHOT'
     }
 }
 
-apply plugin: 'com.hirakida.hello'
+apply plugin: 'maven'
+apply plugin: 'com.github.hirakida.hello'

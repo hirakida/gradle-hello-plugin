@@ -1,14 +1,14 @@
-package com.hirakida.gradle
+package com.github.hirakida.gradle
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 
 class HelloTask extends DefaultTask {
 
-    public static final String NAME = 'hello'
+    public static final String TASK_NAME = 'hello'
 
     @TaskAction
     def exec() {
-        println "${project.hello.greeting}, ${project.hello.message}"
+        println "Hello, ${project.hello.message}"
     }
 }

@@ -1,7 +1,7 @@
 # gradle-hello-plugin
 
 ```
-$ ./gradlew clean jar
+$ ./gradlew clean upload
 ```
 
 ```
