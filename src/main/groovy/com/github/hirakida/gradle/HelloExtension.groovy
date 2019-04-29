@@ -1,7 +1,12 @@
 package com.github.hirakida.gradle
 
-class HelloExtension {
-    public static final String EXTENSION_NAME = "hello"
+import org.gradle.api.tasks.Input
 
+class HelloExtension {
+
+    @Input
     String message = 'Gradle Plugin!'
+
+    @Input
+    boolean debug
 }

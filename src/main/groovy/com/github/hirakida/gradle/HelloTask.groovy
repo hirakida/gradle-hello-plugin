@@ -5,10 +5,16 @@ import org.gradle.api.tasks.TaskAction
 
 class HelloTask extends DefaultTask {
 
-    public static final String TASK_NAME = 'hello'
-
     @TaskAction
     def exec() {
+        if (project.hello.debug) {
+            println 'Start TaskAction.'
+        }
+
         println "Hello, ${project.hello.message}"
+
+        if (project.hello.debug) {
+            println 'End TaskAction.'
+        }
     }
 }

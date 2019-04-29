@@ -1,28 +1,42 @@
-group 'com.github.hirakida'
-version '0.0.1-SNAPSHOT'
+plugins {
+    id 'com.gradle.plugin-publish' version '0.10.1'
+    id 'java-gradle-plugin'
+    id 'groovy'
+    id 'maven'
+}
 
-apply plugin: 'maven'
-apply plugin: 'groovy'
-apply plugin: 'idea'
-
-sourceCompatibility = 1.8
+group = 'com.github.hirakida.gradle'
+version = '0.0.1'
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile gradleApi()
-    compile localGroovy()
-    testCompile localGroovy()
+    implementation gradleApi()
+    implementation localGroovy()
+    testImplementation localGroovy()
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "file://${rootProject.projectDir}/maven-repo")
+gradlePlugin {
+    plugins {
+        helloPlugin {
+            id = 'com.github.hirakida.hello'
+            implementationClass = 'com.github.hirakida.gradle.HelloPlugin'
         }
     }
 }
 
-jar.baseName = 'gradle-hello-plugin'
+pluginBundle {
+    website = 'https://github.com/hirakida/gradle-hello-plugin'
+    vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin'
+    description = "This is demo plugin."
+    tags = ['hello']
+
+    plugins {
+        helloPlugin {
+            displayName = 'Gradle Hello Plugin'
+        }
+    }
+}
