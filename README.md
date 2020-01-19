@@ -7,7 +7,7 @@ https://plugins.gradle.org/docs/submit
 % ./gradlew clean build
 % ./gradlew publishPlugins
 
-% ./gradlew -q hello -b examples/build.gradle
+% ./gradlew hello -b examples/build.gradle
 ```
 
 ## Local
@@ -15,5 +15,5 @@ https://plugins.gradle.org/docs/submit
 % ./gradlew clean build
 % ./gradlew publishToMavenLocal
 
-% ./gradlew -q hello -b examples/build-local.gradle
+% ./gradlew hello -b examples/build-local.gradle
 ```

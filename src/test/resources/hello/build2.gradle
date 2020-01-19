@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.github.hirakida.gradle:gradle-hello-plugin:0.0.2'
+    }
+}
+
+apply plugin: 'com.github.hirakida.hello'
+
+hello {
+    message = 'Hello Plugin Test'
+}
