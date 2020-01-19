@@ -3,5 +3,3 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
-rootProject.name = 'gradle-hello-plugin-demo'

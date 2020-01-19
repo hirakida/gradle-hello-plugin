@@ -3,7 +3,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.github.hirakida.gradle:gradle-hello-plugin:0.0.1'
+        classpath 'com.github.hirakida.gradle:gradle-hello-plugin:0.0.2'
     }
 }
 

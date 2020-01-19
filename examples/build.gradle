@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.hirakida.hello' version '0.0.1'
+    id 'com.github.hirakida.hello' version '0.0.2'
 }
 
 hello {

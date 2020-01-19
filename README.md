@@ -4,18 +4,16 @@ https://plugins.gradle.org/docs/submit
 
 ## Plugin Portal
 ```
-$ ./gradlew clean build
-$ ./gradlew publishPlugins
+% ./gradlew clean build
+% ./gradlew publishPlugins
 
-$ cd example
-$ gradle -q hello
+% ./gradlew -q hello -b examples/build.gradle
 ```
 
 ## Local
 ```
-$ ./gradlew clean build
-$ ./gradlew install
+% ./gradlew clean build
+% ./gradlew publishToMavenLocal
 
-$ cd example
-$ gradle -q hello -b build-local.gradle
+% ./gradlew -q hello -b examples/build-local.gradle
 ```

@@ -2,11 +2,11 @@ plugins {
     id 'com.gradle.plugin-publish' version '0.10.1'
     id 'java-gradle-plugin'
     id 'groovy'
-    id 'maven'
+    id 'maven-publish'
 }
 
 group = 'com.github.hirakida.gradle'
-version = '0.0.1'
+version = '0.0.2'
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
@@ -31,8 +31,8 @@ gradlePlugin {
 pluginBundle {
     website = 'https://github.com/hirakida/gradle-hello-plugin'
     vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin'
-    description = "This is demo plugin."
-    tags = ['hello']
+    description = "Demo plugin"
+    tags = ['hello', 'demo']
 
     plugins {
         helloPlugin {
