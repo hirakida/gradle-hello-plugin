@@ -1,13 +1,7 @@
-buildscript {
-    repositories {
-        mavenLocal()
-    }
-    dependencies {
-        classpath 'com.github.hirakida.gradle:gradle-hello-plugin:0.0.2'
-    }
+// gradle -b build-local.gradle hello
+plugins {
+    id 'com.github.hirakida.hello' version '0.0.2'
 }
-
-apply plugin: 'com.github.hirakida.hello'
 
 hello {
     message = 'gradle-hello-plugin!'
