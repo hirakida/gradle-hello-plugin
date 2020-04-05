@@ -7,7 +7,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 class HelloPluginTest extends Specification {
-    public static final List<String> GRADLE_VERSIONS = ['6.0', '6.1']
+    public static final List<String> GRADLE_VERSIONS = ['6.0', '6.1', '6.2', '6.3']
     private File projectDir
 
     def setup() {
