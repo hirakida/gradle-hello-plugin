@@ -1,8 +1,9 @@
 plugins {
     id 'com.gradle.plugin-publish' version '0.12.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id 'java-gradle-plugin'
-    id 'groovy'
     id 'maven-publish'
+    id 'groovy'
 }
 
 group = 'com.github.hirakida.gradle'
