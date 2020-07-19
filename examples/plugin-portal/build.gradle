@@ -1,7 +1,9 @@
+// gradle hello
 plugins {
     id 'com.github.hirakida.hello' version '0.0.3'
 }
 
 hello {
-    message = 'Hello Plugin Test'
+    message = 'gradle-hello-plugin!'
+    debug = true
 }

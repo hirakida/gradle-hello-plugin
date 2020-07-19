@@ -6,11 +6,14 @@ import org.gradle.testkit.runner.TaskOutcome
 import spock.lang.Specification
 import spock.lang.Unroll
 
+/**
+ * https://docs.gradle.org/6.5.1/userguide/test_kit.html
+ */
 class HelloPluginTest extends Specification {
-    public static final List<String> GRADLE_VERSIONS = ['6.0', '6.1', '6.2', '6.3']
-    private File projectDir
+    private static final List<String> GRADLE_VERSIONS = ['6.0', '6.1', '6.2', '6.3', '6.4', '6.5']
+    private static File projectDir
 
-    def setup() {
+    def setupSpec() {
         ClassLoader classLoader = getClass().getClassLoader()
         projectDir = new File(classLoader.getResource("hello").getFile())
     }

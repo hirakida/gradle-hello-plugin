@@ -8,13 +8,13 @@ open class HelloTask : DefaultTask() {
     fun exec() {
         val extension = project.extensions.getByType(HelloExtension::class.java)
         if (extension.debug) {
-            print("Start TaskAction")
+            println("Start TaskAction")
         }
 
-        print("Hello, ${extension.message}")
+        println("Hello, ${extension.message}")
 
         if (extension.debug) {
-            print("End TaskAction")
+            println("End TaskAction")
         }
     }
 }
