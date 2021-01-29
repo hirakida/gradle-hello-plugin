@@ -1,6 +1,6 @@
 plugins {
     id 'com.gradle.plugin-publish' version '0.12.0'
-    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
     id 'java-gradle-plugin'
     id 'maven-publish'
     id 'groovy'
@@ -8,31 +8,31 @@ plugins {
 
 group = 'com.github.hirakida.gradle'
 version = '0.0.3'
-sourceCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
-}
-
-pluginBundle {
-    website = 'https://github.com/hirakida/gradle-hello-plugin'
-    vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin'
-    tags = ['hello', 'demo']
+    testImplementation('org.spockframework:spock-core:1.3-groovy-2.5') {
+        exclude module: 'groovy-all'
+    }
 }
 
 gradlePlugin {
     plugins {
         helloPlugin {
             id = 'com.github.hirakida.hello'
-            displayName = 'Hello Plugin'
-            description = "Demo plugin"
             implementationClass = 'com.github.hirakida.gradle.HelloPlugin'
+            displayName = 'Gradle Hello plugin'
+            description = 'Gradle Hello plugin'
         }
     }
 }
 
-test.dependsOn(publishToMavenLocal)
+pluginBundle {
+    website = 'https://github.com/hirakida/gradle-hello-plugin'
+    vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin.git'
+    tags = ['hello']
+}
