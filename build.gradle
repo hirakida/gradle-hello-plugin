@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.github.hirakida.gradle'
-version = '0.0.3'
+version = '0.0.4'
 sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
