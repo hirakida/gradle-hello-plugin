@@ -1,6 +1,6 @@
 // gradle hello
 plugins {
-    id 'com.github.hirakida.hello' version '0.0.4'
+    id 'com.github.hirakida.hello' version '0.0.5'
 }
 
 hello {
