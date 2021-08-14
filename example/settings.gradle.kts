@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
-        mavenLocal()
         gradlePluginPortal()
     }
 }
+
+rootProject.name = "hello-plugin-demo"
