@@ -8,10 +8,10 @@ import spock.lang.TempDir
 import spock.lang.Unroll
 
 /**
- * https://docs.gradle.org/7.2/userguide/test_kit.html
+ * https://docs.gradle.org/8.5/userguide/test_kit.html
  */
 class HelloPluginTest extends Specification {
-    private static final List<String> GRADLE_VERSIONS = ['6.9', '7.2']
+    private static final List<String> GRADLE_VERSIONS = ['7.2', '8.5']
     @TempDir
     File testProjectDir
     File settingsFile

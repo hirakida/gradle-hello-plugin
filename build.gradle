@@ -1,20 +1,25 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id 'java-gradle-plugin'
     id 'maven-publish'
     id 'groovy'
-    id 'com.gradle.plugin-publish' version '0.14.0'
-    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+    id 'com.gradle.plugin-publish' version '1.2.1'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
 }
 
 group = 'com.github.hirakida.gradle'
 version = '0.0.7'
-sourceCompatibility = JavaVersion.VERSION_11
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
 
 repositories {
     mavenCentral()
 }
 
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+tasks.withType(KotlinCompile) {
     kotlinOptions {
         jvmTarget = '11'
     }
@@ -32,18 +37,16 @@ test {
 }
 
 gradlePlugin {
+    website = 'https://github.com/hirakida/gradle-hello-plugin'
+    vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin.git'
+
     plugins {
         helloPlugin {
             id = 'com.github.hirakida.hello'
             implementationClass = 'com.github.hirakida.gradle.HelloPlugin'
             displayName = 'Gradle Hello plugin'
             description = 'Gradle Hello plugin'
+            tags.set(['hello'])
         }
     }
-}
-
-pluginBundle {
-    website = 'https://github.com/hirakida/gradle-hello-plugin'
-    vcsUrl = 'https://github.com/hirakida/gradle-hello-plugin.git'
-    tags = ['hello']
 }
