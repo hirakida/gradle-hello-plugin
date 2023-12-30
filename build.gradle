@@ -8,8 +8,8 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.9.22'
 }
 
-group = 'com.github.hirakida.gradle'
-version = '0.0.7'
+group = 'io.github.hirakida.hello'
+version = '0.1.0'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -26,10 +26,11 @@ tasks.withType(KotlinCompile) {
 }
 
 dependencies {
-    testImplementation('org.spockframework:spock-core:2.0-groovy-3.0') {
+    testImplementation('org.spockframework:spock-core:2.3-groovy-3.0') {
         exclude group: 'org.codehaus.groovy'
     }
     testImplementation('org.junit.jupiter:junit-jupiter-api')
+    testImplementation('org.junit.platform:junit-platform-launcher')
 }
 
 test {
@@ -42,7 +43,7 @@ gradlePlugin {
 
     plugins {
         helloPlugin {
-            id = 'com.github.hirakida.hello'
+            id = 'io.github.hirakida.hello'
             implementationClass = 'com.github.hirakida.gradle.HelloPlugin'
             displayName = 'Gradle Hello plugin'
             description = 'Gradle Hello plugin'
