@@ -44,7 +44,7 @@ gradlePlugin {
     plugins {
         helloPlugin {
             id = 'io.github.hirakida.hello'
-            implementationClass = 'com.github.hirakida.gradle.HelloPlugin'
+            implementationClass = 'io.github.hirakida.hello.HelloPlugin'
             displayName = 'Gradle Hello plugin'
             description = 'Gradle Hello plugin'
             tags.set(['hello'])

@@ -1,4 +1,4 @@
-package com.github.hirakida.gradle
+package io.github.hirakida.hello
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction

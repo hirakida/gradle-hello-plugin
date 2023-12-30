@@ -1,4 +1,4 @@
-package com.github.hirakida.gradle
+package io.github.hirakida.hello
 
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
@@ -30,7 +30,7 @@ class HelloPluginTest extends Specification {
         settingsFile << "rootProject.name = 'hello1'"
         buildFile << """
             plugins {
-                id 'com.github.hirakida.hello' version '0.1.0'
+                id 'io.github.hirakida.hello' version '0.1.0'
             }
         """
 
@@ -55,7 +55,7 @@ class HelloPluginTest extends Specification {
         settingsFile << "rootProject.name = 'hello2'"
         buildFile << """
             plugins {
-                id 'com.github.hirakida.hello' version '0.1.0'
+                id 'io.github.hirakida.hello' version '0.1.0'
             }
             hello {
                 message = 'Hello!'

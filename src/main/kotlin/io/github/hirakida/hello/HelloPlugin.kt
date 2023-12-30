@@ -1,4 +1,4 @@
-package com.github.hirakida.gradle
+package io.github.hirakida.hello
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
